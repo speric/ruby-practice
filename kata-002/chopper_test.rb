@@ -3,6 +3,11 @@ require 'minitest/autorun'
 require_relative 'chopper'
 
 class ChopperTest < Minitest::Test
+  
+  def setup
+    @large_array = (0...100000).sort
+  end
+  
   def test_chop
     assert_equal(-1, Chopper.chop(3, []))
     assert_equal(-1, Chopper.chop(3, [1]))
@@ -25,5 +30,9 @@ class ChopperTest < Minitest::Test
     assert_equal(-1, Chopper.chop(4, [1, 3, 5, 7]))
     assert_equal(-1, Chopper.chop(6, [1, 3, 5, 7]))
     assert_equal(-1, Chopper.chop(8, [1, 3, 5, 7]))
+  end
+  
+  def test_large_array
+    assert_equal(99999, Chopper.chop(99999, @large_array))
   end
 end

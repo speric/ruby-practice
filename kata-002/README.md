@@ -52,3 +52,13 @@ Here is the `Test::Unit code` I used when developing my methods. Feel free to ad
     assert_equal(-1, chop(8, [1, 3, 5, 7]))
   end
 ```
+
+**Benchmarks**
+v1
+```
+    user     system      total        real
+11.520000   0.010000  11.530000 ( 11.601866)
+```
+v2
+    user     system      total        real
+6.700000   0.010000   6.710000 (  6.757558)
