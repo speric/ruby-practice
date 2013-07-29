@@ -1,4 +1,4 @@
-##Kata Two -- Karate Chop
+﻿##Kata Two -- Karate Chop
 
 [http://codekata.pragprog.com/2007/01/kata_two_karate.html](http://codekata.pragprog.com/2007/01/kata_two_karate.html)
 
@@ -53,12 +53,19 @@ Here is the `Test::Unit code` I used when developing my methods. Feel free to ad
   end
 ```
 
-**Benchmarks**
+**Benchmarks (chopper_bench.rb)**
 v1
 ```
     user     system      total        real
-11.520000   0.010000  11.530000 ( 11.601866)
+11.520000   0.010000  11.530000 (11.601866)
 ```
 v2
+```
     user     system      total        real
-6.700000   0.010000   6.710000 (  6.757558)
+6.700000   0.010000   6.710000 (6.757558)
+```
+v3 (split array into two)
+```
+    user     system      total        real
+3.344000   0.000000   3.344000 (3.343750)
+```
